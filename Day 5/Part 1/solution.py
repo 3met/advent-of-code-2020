@@ -1,7 +1,7 @@
 
 """
 Advent of Code 2020
-By Emet Behredt
+By Emet Behrendt
 Day 5
 Section 1
 """
@@ -18,7 +18,42 @@ with open(INPUT_PATH, 'r') as file:
 
 def main(puzzle_input):
 	# Main Function
-	pass
+	highest = 0
+	row = None
+	column = None
+
+	for seat in puzzle_input:
+
+		top = 0
+		bot = 127
+
+		for letter in seat[0:7]:
+			diff = (bot - top + 1)/2
+
+			if letter == 'F':
+				bot -= diff
+			else:
+				top += diff
+
+		row = top	
+
+		top = 0
+		bot = 7
+
+		for letter in seat[7:10]:
+			diff = (bot - top + 1)/2
+			
+			if letter == 'L':
+				bot -= diff
+			else:
+				top += diff
+
+		column = top
+
+		iden = row * 8 + column
+		highest = max(highest, iden)
+
+	print(highest)
 
 
 if __name__ == '__main__':

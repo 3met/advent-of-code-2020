@@ -62,7 +62,7 @@ def create_folder(name_format=f'%s', target_dir=SELF_DIR):
 
 		with open(os.path.join(dir_2, 'solution.py'), 'w') as file:
 			start_code = gen_start_code(
-				name='Emet Behredt',
+				name='Emet Behrendt',
 				year=2020,
 				day=day,
 				section=2)

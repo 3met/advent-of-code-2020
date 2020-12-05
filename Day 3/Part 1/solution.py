@@ -1,7 +1,7 @@
 
 """
 Advent of Code 2020
-By Emet Behredt
+By Emet Behrendt
 Day 3
 Section 1
 """
