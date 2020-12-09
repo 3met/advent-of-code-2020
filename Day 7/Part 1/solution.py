@@ -64,9 +64,9 @@ def main(puzzle_input):
 			# Note that distancing between bag names is constant
 			i = 0
 			while True:
-				i += 1
-				if bool(words[5+i*4:7+i*4]):
-					children.append(' '.join(words[5+i*4:7+i*4]))
+				i += 4
+				if bool(words[5+i:7+i]):
+					children.append(' '.join(words[5+i:7+i]))
 				else:
 					break
 
